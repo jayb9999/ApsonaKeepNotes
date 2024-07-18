@@ -5,7 +5,6 @@ const bcrypt = require('bcryptjs');
 const sqlite3 = require('sqlite3').verbose();
 
 const app = express();
-require('dotenv').config();
 const port = process.env.PORT || 3000;
 
 // Initialize SQLite database
