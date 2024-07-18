@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note Keeping App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <div id="auth">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button id="login">Login</button>
+      <button id="register">Register</button>
+    </div>
+    <div id="main" style="display: none;">
+      <nav>
+        <button id="new-note">New Note</button>
+        <input type="text" id="search" placeholder="Search notes">
+        <button id="view-archived">Archived Notes</button>
+        <button id="view-reminders">Reminders</button>
+      </nav>
+      <div id="notes"></div>
+      <div id="note-form" style="display: none;">
+        <textarea id="note-content" placeholder="Note content"></textarea>
+        <input type="text" id="note-tags" placeholder="Tags (comma separated)">
+        <input type="date" id="note-dueDate">
+        <input type="color" id="note-color" value="#ffffff">
+        <button id="save-note">Save</button>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
