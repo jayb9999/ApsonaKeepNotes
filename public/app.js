@@ -1,4 +1,4 @@
-const API_URL = 'https://apsona-keep-notes.onrender.com';
+const API_URL = 'https://apsona-keep-notes.onrender.com/api';
 let authToken = null;
 
 document.getElementById('login').addEventListener('click', async () => {
