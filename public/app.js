@@ -1,5 +1,15 @@
-const API_URL = 'https://apsona-keep-notes.onrender.com/api';
+const API_URL = 'http://localhost:3000/api';
 let authToken = null;
+
+document.getElementById('regBtn').addEventListener('click', () => {
+  document.getElementById('lg').style.display = 'none';
+  document.getElementById('reg').style.display = 'block';
+})
+
+document.getElementById('reglogin').addEventListener('click', () => {
+  document.getElementById('lg').style.display = 'block';
+  document.getElementById('reg').style.display = 'none';
+})
 
 document.getElementById('login').addEventListener('click', async () => {
   const username = document.getElementById('username').value;
@@ -21,22 +31,18 @@ document.getElementById('login').addEventListener('click', async () => {
 });
 
 document.getElementById('register').addEventListener('click', async () => {
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
+  const username = document.getElementById('regusername').value;
+  const password = document.getElementById('regpassword').value;
   const response = await fetch(`${API_URL}/auth/register`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
   });
   if (response.ok) {
-    alert('User registered');
+    alert('User registered successfully');
   } else {
     alert('Registration failed');
   }
-});
-
-document.getElementById('new-note').addEventListener('click', () => {
-  document.getElementById('note-form').style.display = 'block';
 });
 
 document.getElementById('save-note').addEventListener('click', async () => {
