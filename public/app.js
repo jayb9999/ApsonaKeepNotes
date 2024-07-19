@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api';
+const API_URL = 'https://apsona-keep-notes.onrender.com/api';
 let authToken = null;
 
 document.getElementById('regBtn').addEventListener('click', () => {
