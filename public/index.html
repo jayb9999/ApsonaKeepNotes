@@ -9,23 +9,38 @@
 <body>
   <div id="app">
     <div id="auth">
-      <h2>Login</h2>
-      <input type="text" id="username" placeholder="Username">
-      <input type="password" id="password" placeholder="Password">
-      <button id="login">Login</button>
-      <button id="register">Register</button>
+      <div id="lg">
+        <h1>Welcome to Keep Notes</h1>
+        <h2>Please Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button id="login">Login</button>
+        <p>If you are a new user kindly please Register</p>
+        <button id="regBtn">Register</button>
+      </div>
+      <div id="reg" style="display: none;">
+        <input type="text" id="regusername" placeholder="Username">
+        <input type="password" id="regpassword" placeholder="Password">
+        <button id="register">Register</button>
+        <p>After successfull registration please login by clicking below login button</p>
+        <button id="reglogin">Login</button>
+        <p><span>Powered by Apsona</span></p>
+      </div>
     </div>
-    <div id="main" style="display: none;">
-      <nav>
-        <button id="new-note">New Note</button>
-        <input type="text" id="search" placeholder="Search notes">
-        <button id="view-archived">Archived Notes</button>
-        <button id="view-reminders">Reminders</button>
-      </nav>
-      <div id="notes"></div>
-      <div id="note-form" style="display: none;">
+    <div class="mn" id="main" style="display: none;">
+      <div class="nv">
+        <nav>
+            <button id="new-note">New Note</button>
+            <input type="text" id="search" placeholder="Search notes">
+            <button id="view-archived">Archived Notes</button>
+            <button id="view-reminders">Reminders</button>
+        </nav>
+      </div>
+      <div id="note-form">
         <textarea id="note-content" placeholder="Note content"></textarea>
-        <input type="text" id="note-tags" placeholder="Tags (comma separated)">
+      </div>
+      <div id="note-relates">
+        <input type="text" id="note-tags" placeholder="Tags">
         <input type="date" id="note-dueDate">
         <input type="color" id="note-color" value="#ffffff">
         <button id="save-note">Save</button>
